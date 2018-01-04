@@ -1,0 +1,22 @@
+n=raw_input('Enter Totall Num Of process(Max 10)')
+n=int(n)
+burstTime=[]
+waitTime=[]
+TurnAroundTime=[]
+AvgTurnAroundTime=0
+x=0
+for i in range(0,n,1):
+    print "Enetr Burst Time Of Process ",i
+    y=raw_input()
+    y=int(y)
+    burstTime.append(y)
+for i in range(0,n,1):
+    waitTime.append(x)
+    TurnAroundTime.append(x)
+    for j in range(0,i):
+        waitTime[i]=waitTime[i]+burstTime[j]
+
+for i in range(0,n,1):
+    TurnAroundTime[i]=burstTime[i]+waitTime[i]
+    AvgTurnAroundTime=AvgTurnAroundTime+TurnAroundTime[i]
+print float(AvgTurnAroundTime/n)

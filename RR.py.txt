@@ -1,0 +1,22 @@
+n=raw_input('Enter Totall Num Of process(Max 10)')
+n=int(n)
+burstTime=[]
+waitTime=[]
+TurnAroundTime=[]
+AvgTurnAroundTime=0
+processes=[]
+processes.append(0)
+ArrivalTime=[]
+x=0
+quantam=raw_input('Quantam Time')
+quantam=int(quantam)
+for i in range(0,n,1):
+    print "Enetr Burst Time Of Process ",i
+    y=raw_input()
+    y=int(y)
+    burstTime.append(y)
+    processes.append(i)
+    print "Enetr Arrival Time Of Process ", i
+    z = raw_input()
+    z = int(z)
+    ArrivalTime.append(z)
